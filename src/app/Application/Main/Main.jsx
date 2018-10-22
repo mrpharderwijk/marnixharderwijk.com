@@ -36,7 +36,7 @@ const Main = () => (
     </main>
     <CookiesNotificationContainer />
   </div>
-)
+);
 
 Main.propTypes = propTypes;
 

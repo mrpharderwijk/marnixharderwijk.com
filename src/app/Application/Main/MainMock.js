@@ -1,7 +1,7 @@
 const main = {
   header: {
-    firstName: 'Lorem',
-    lastName: 'Ipsum',
+    firstName: 'Marnix',
+    lastName: 'Harderwijk',
   },
   headlines: [{
     id: 0,

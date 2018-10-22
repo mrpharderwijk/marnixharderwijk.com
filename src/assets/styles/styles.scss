@@ -1,0 +1,30 @@
+@import './_variables';
+@import './mixins/_mixins';
+@import './components/_buttons';
+@import './components/_headings';
+@import './components/_icons';
+@import './components/_lists';
+@import './helpers/_textual';
+
+html,
+body {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  height: 100%;
+  letter-spacing: .1rem;
+}
+
+a {
+  color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+
+#root {
+  height: 100%;
+}

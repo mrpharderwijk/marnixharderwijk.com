@@ -1,0 +1,27 @@
+@import 'assets/styles/mixins/_sizing';
+
+.list-group {
+  margin-bottom: 1.5rem;
+
+  .list-group-item {
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0;
+  }
+
+  &--vertical {
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .list-group-item {
+      margin-left: 1rem;
+      flex: 0 1 auto;
+      text-align: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

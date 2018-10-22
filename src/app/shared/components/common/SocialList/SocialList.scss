@@ -1,0 +1,22 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins/animations';
+@import 'assets/styles/mixins/vendor-prefixes';
+
+.btn-social {
+  background-color: lighten($color-black, 4%);
+  overflow: hidden;
+  @include transition(background-color .3s ease-in-out);
+
+  .icon {
+    color: $color-white;
+  }
+
+  &:hover {
+    background-color: lighten($brand-primary, 5%);
+
+    .icon {
+      color: $color-black;
+      @extend .animate--to-bottom-from-top;
+    }
+  }
+}

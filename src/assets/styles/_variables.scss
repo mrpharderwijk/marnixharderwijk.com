@@ -1,0 +1,27 @@
+@function multiple-box-shadow($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+
+  @for $i from 2 through $n {
+    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
+  }
+
+  @return unquote($value)
+}
+
+$base-size: 16px;
+$brand-primary: #e31b6d;
+$brand-secondary: #008489;
+
+$color-black: #252934;
+$color-black-lighten-20: lighten(#252934, 20%);
+
+$brand-dark: #002042;
+$color-white: #fff;
+$color-light-gray: #dde3e9;
+$color-gray: #484848;
+
+$color-border: rgba(0, 0, 0, .0625);
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big: multiple-box-shadow(100);
+$color-font: #72777a;

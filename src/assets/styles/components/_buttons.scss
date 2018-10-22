@@ -1,0 +1,38 @@
+.btn {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+
+  &:hover {
+    background-color: rgba($brand-primary, .7);
+  }
+}
+
+.btn-social {
+  display: block;
+  margin: 0 auto;
+  @include square(55px);
+  @include transition(all .5s ease-in-out);
+
+  .icon {
+    display: block;
+    font-size: 2rem;
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: $brand-primary;
+
+    .icon {
+      color: $color-black;
+    }
+  }
+}

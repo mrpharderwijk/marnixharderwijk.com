@@ -11,9 +11,20 @@ body {
   background-color: $color-white;
   color: $color-black;
   font-family: arial, sans-serif;
-  font-size: 16px;
   height: 100%;
   letter-spacing: .1rem;
+
+  @include for-phone-only {
+    font-size: 12px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 14px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 16px;
+  }
 }
 
 a {

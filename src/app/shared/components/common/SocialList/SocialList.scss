@@ -4,7 +4,6 @@
 
 .btn-social {
   background-color: lighten($color-black, 4%);
-  overflow: hidden;
   @include transition(background-color .3s ease-in-out);
 
   .icon {

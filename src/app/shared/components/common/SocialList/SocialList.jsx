@@ -19,7 +19,7 @@ const SocialList = ({ listItems }) => (
     {
       listItems && listItems.length
         ? (
-          <ul className="list-group list-group--vertical">
+          <ul className="list-group list-group--horizontal">
             {
               listItems.map(listItem => (
                 <li className="list-group-item" key={listItem.id}>

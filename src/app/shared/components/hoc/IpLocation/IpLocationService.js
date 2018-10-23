@@ -5,7 +5,7 @@ export default {
     if (navigator.onLine) {
       return (
         await httpService.get(this.urlRoot, {
-          baseURL: 'http://ip-api.com/json',
+          baseURL: '//ip-api.com/json',
           withoutAuth: true,
         })
       ).data;

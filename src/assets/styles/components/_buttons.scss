@@ -1,3 +1,5 @@
+@import 'assets/styles/mixins/calculations';
+
 .btn {
   border: 0;
   border-radius: 0;
@@ -19,7 +21,8 @@
 .btn-social {
   display: block;
   margin: 0 auto;
-  @include square(55px);
+  width: toRem(55px);
+  height: toRem(55px);
   @include transition(all .5s ease-in-out);
 
   .icon {

@@ -1,8 +1,9 @@
 @import 'assets/styles/variables';
 @import 'assets/styles/mixins/animations';
+@import 'assets/styles/mixins/calculations';
 
 .list-group-headline {
-  height: 25px;
+  height: toRem(25px);
   overflow: hidden;
   position: relative;
 

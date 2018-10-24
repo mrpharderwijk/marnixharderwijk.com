@@ -18,8 +18,8 @@ class IpLocation extends Component {
       <React.Fragment>
         <pre>{JSON.stringify(this.props, null, 2)}</pre>
         {
-          position && position.coords
-            ? `lat : ${position.coords.latitude} / long: ${position.coords.longitude}`
+          position && position.longitude && position.latitude
+            ? `lat : ${position.latitude} / long: ${position.longitude}`
             : ''
         }
       </React.Fragment>

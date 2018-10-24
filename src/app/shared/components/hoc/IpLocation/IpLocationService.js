@@ -5,7 +5,7 @@ export default {
     if (navigator.onLine) {
       return (
         await httpService.get(this.urlRoot, {
-          baseURL: '//ip-api.com/json',
+          baseURL: 'https://json.geoiplookup.io/',
           withoutAuth: true,
         })
       ).data;

@@ -38,7 +38,9 @@ const fetchIpLocation = () => (dispatch) => {
 const shouldFetchIpLocation = (state) => {
   if (!state.ipLocation || !state.ipLocation.position) {
     return true;
-  } else if (state.ipLocation.isFetching) {
+  }
+
+  if (state.ipLocation.isFetching) {
     return false;
   }
   return state.ipLocation.didInvalidate;

@@ -2,6 +2,7 @@ import pathToRegexp from 'path-to-regexp';
 
 export const routes = {
   default: '/',
+  availability: '/availability',
 };
 
 export const paths = {};

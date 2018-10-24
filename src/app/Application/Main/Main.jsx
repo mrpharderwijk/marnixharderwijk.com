@@ -29,7 +29,6 @@ const Main = () => (
               </h1>
             ) : ''
         }
-
         <Headlines lines={mainMock.headlines} />
         <SocialList listItems={mainMock.socialList} />
       </Jumbotron>

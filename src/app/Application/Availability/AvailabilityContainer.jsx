@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import Main from './Main';
+import Availability from './Availability';
 
 const mapStateToProps = state => ({
   cookies: state.cookies,
   ipLocation: state.ipLocation,
 });
 
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(Availability);

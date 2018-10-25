@@ -1,7 +1,9 @@
 import React from 'react';
+import AvailabilityRoutes from './AvailabilityRoutes';
+import './Availability.css';
 
-const Availability = ({ ...props }) => (
-  <div>Availability works!</div>
+const Availability = () => (
+  <AvailabilityRoutes />
 );
 
 export default Availability;

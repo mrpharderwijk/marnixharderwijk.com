@@ -3,12 +3,13 @@
 @import './components/_buttons';
 @import './components/_headings';
 @import './components/_icons';
+@import './components/_jumbotrons';
 @import './components/_lists';
 @import './helpers/_textual';
 
 html,
 body {
-  background-color: $color-white;
+  background-color: $color-black;
   color: $color-black;
   font-family: arial, sans-serif;
   height: 100%;

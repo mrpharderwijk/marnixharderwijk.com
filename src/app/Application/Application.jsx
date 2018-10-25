@@ -1,9 +1,18 @@
 import React from 'react';
+import CookiesNotificationContainer from '../shared/components/common/Cookies/CookiesNotificationContainer';
 import ApplicationRoutes from './ApplicationRoutes';
+
+import './Application.css';
 
 const Application = ({ ...props }) => (
   <React.Fragment>
-    <ApplicationRoutes {...props} />
+    <header>
+      header
+    </header>
+    <main role="main" className="main__container">
+      <ApplicationRoutes {...props} />
+    </main>
+    <CookiesNotificationContainer />
   </React.Fragment>
 );
 

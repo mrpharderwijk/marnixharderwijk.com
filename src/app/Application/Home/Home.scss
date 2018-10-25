@@ -1,0 +1,11 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins/animations';
+@import 'assets/styles/mixins/vendor-prefixes';
+
+.jumbotron {
+
+  .heading {
+    color: $color-white;
+    text-align: center;
+  }
+}

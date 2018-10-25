@@ -1,0 +1,13 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/mixins/vendor-prefixes';
+
+.availability-information {
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height .5s ease-in-out);
+
+  &--opened {
+    max-height: 800px;
+  }
+}

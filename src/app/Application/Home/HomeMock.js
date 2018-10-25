@@ -1,4 +1,4 @@
-const main = {
+export default {
   header: {
     firstName: 'Marnix',
     lastName: 'Harderwijk',
@@ -35,5 +35,3 @@ const main = {
     },
   ],
 };
-
-export default main;

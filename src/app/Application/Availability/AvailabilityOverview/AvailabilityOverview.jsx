@@ -1,5 +1,11 @@
 import React from 'react';
-import { Jumbotron } from 'reactstrap';
+import {
+  Jumbotron,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+} from 'reactstrap';
 import appHistory from '../../ApplicationHistory';
 import { paths } from '../../../shared/helpers/RoutesHelper';
 import availabilityMock from '../AvailabilityMock';
@@ -11,16 +17,28 @@ const AvailabilityOverview = () => {
   };
 
   return (
-    <Jumbotron fluid>
-      <h1 className="heading heading--xxl">
-        {
-          availabilityMock && availabilityMock.status
-            ? availabilityMock.available.text
-            : availabilityMock.notAvailable.text
-        }
-      </h1>
-      <button type="button" className="btn btn-primary" onClick={openForm}>more info</button>
-    </Jumbotron>
+    <React.Fragment>
+      <Jumbotron fluid>
+        <Card>
+          <CardBody>
+            <CardTitle>
+              {
+                availabilityMock && availabilityMock.status
+                  ? availabilityMock.available.text
+                  : availabilityMock.notAvailable.text
+              }
+            </CardTitle>
+            <CardText>
+              <dl>
+                <dd>Current client: NS International</dd>
+                <dt>Due till: March 2019</dt>
+              </dl>
+            </CardText>
+            <button type="button" className="btn btn-primary" onClick={openForm}>more info</button>
+          </CardBody>
+        </Card>
+      </Jumbotron>
+    </React.Fragment>
   );
 };
 

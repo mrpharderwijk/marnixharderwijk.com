@@ -11,7 +11,7 @@
     color: $color-white;
     position: absolute;
     text-align: center;
-    transform: translateY(25px);
+    transform: translate3d(0, 0, 0) translateY(25px);
     width: 100%;
     animation-iteration-count: 1;
     @extend .animate--top-in-bottom-out;

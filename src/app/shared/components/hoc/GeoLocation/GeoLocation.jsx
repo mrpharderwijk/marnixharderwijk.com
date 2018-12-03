@@ -7,16 +7,18 @@ const propTypes = {
 
 class GeoLocation extends Component {
   componentDidMount() {
-    this.props.fetchGeoLocation();
+    const { fetchGeoLocation } = this.props;
+    fetchGeoLocation();
   }
 
   render() {
+    const { position } = this.props;
     return (
       <React.Fragment>
         <pre>{JSON.stringify(this.props, null, 2)}</pre>
         {
-          this.props.position && this.props.position.coords
-            ? `lat : ${this.props.position.coords.latitude} / long: ${this.props.position.coords.longitude}`
+          position && position.coords
+            ? `lat : ${position.coords.latitude} / long: ${position.coords.longitude}`
             : ''
         }
       </React.Fragment>

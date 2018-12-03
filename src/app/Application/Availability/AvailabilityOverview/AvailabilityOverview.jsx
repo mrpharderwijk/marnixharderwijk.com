@@ -4,7 +4,6 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardText,
 } from 'reactstrap';
 import appHistory from '../../ApplicationHistory';
 import { paths } from '../../../shared/helpers/RoutesHelper';
@@ -28,12 +27,10 @@ const AvailabilityOverview = () => {
                   : availabilityMock.notAvailable.text
               }
             </CardTitle>
-            <CardText>
-              <dl>
-                <dd>Current client: NS International</dd>
-                <dt>Due till: March 2019</dt>
-              </dl>
-            </CardText>
+            <dl>
+              <dd>Current client: NS International</dd>
+              <dt>Due till: March 2019</dt>
+            </dl>
             <button type="button" className="btn btn-primary" onClick={openForm}>more info</button>
           </CardBody>
         </Card>

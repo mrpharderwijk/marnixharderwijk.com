@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchGeoLocationIfNeeded } from './geoLocation.actions';
+import { fetchGeoLocationIfNeeded } from './redux/GeoLocationActions';
 import GeoLocation from './GeoLocation';
 
 const mapStateToProps = state => state.geoLocation;

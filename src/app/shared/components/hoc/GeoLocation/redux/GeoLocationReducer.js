@@ -2,7 +2,7 @@ import {
   REQUEST_GEOLOCATION,
   RECEIVE_GEOLOCATION,
   INVALIDATE_GEOLOCATION,
-} from './geoLocation.actions';
+} from './GeoLocationActions';
 
 function geoLocationReducer(
   state = {

@@ -10,15 +10,20 @@ import {
   Button,
 } from 'reactstrap';
 import { NavLink as RouterLink } from 'react-router-dom';
+import UtilsHelper from '../../../helpers/UtilsHelper';
 import appHistory from '../../../../Application/ApplicationHistory';
 
+import './Navigation.css';
+
 const propTypes = {
-  shouldShowBackButton: PropTypes.func.isRequired,
   navigation: PropTypes.shape({
     didInvalidate: PropTypes.bool,
     isFetching: PropTypes.bool,
     lastUpdated: PropTypes.number,
     backButton: PropTypes.bool,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
   }).isRequired,
 };
 
@@ -32,24 +37,27 @@ class Navigation extends Component {
     };
   }
 
-  componentDidMount() {
-    const { shouldShowBackButton } = this.props;
-    shouldShowBackButton(appHistory.location);
-  }
-
   toggle() {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen,
     }));
   }
 
+  shouldShowBackButton() {
+    const { location } = this.props;
+
+    return UtilsHelper.hasPath(location, 'pathname')
+      ? location.pathname.split('/').filter(Boolean).length
+      : false;
+  }
+
   render() {
     const { isOpen } = this.state;
-    const { navigation } = this.props;
+
     return (
-      <Navbar className="navigation" expand="md">
+      <Navbar className="navbar--fixed-top" expand="md">
         {
-          navigation.backButton
+          this.shouldShowBackButton()
             ? (
               <Button onClick={appHistory.goBack}>
                 <span className="icon icon-chevron-left" />

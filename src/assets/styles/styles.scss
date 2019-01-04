@@ -7,11 +7,14 @@
 @import './components/_lists';
 @import './helpers/_textual';
 
+@include font-face('Raleway', '../fonts/raleway/raleway-regular', null, null, eot woff ttf svg);
+@include font-face('Raleway Semi Bold', '../fonts/raleway/raleway-semi-bold', null, null, eot woff ttf svg);
+
 html,
 body {
   background-color: $color-black;
   color: $color-black;
-  font-family: arial, sans-serif;
+  font-family: 'Raleway', arial, sans-serif;
   height: 100%;
   letter-spacing: .1rem;
 

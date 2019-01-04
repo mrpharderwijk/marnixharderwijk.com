@@ -1,3 +1,32 @@
-.highlight {
-  color: $brand-primary;
+.h-color {
+  &--primary {
+    color: $brand-primary;
+  }
+  &--secondary {
+    color: $brand-secondary;
+  }
+  &--white {
+    color: $color-white;
+  }
+}
+
+.h-font {
+  &--semi-bold {
+    font-family: 'Raleway Semi Bold';
+  }
+}
+
+.h-align {
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--justify {
+    text-align: justify;
+  }
 }

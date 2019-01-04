@@ -14,7 +14,6 @@
     background-color: lighten($brand-primary, 5%);
 
     .icon {
-      color: $color-black;
       @extend .animate--to-bottom-from-top;
     }
   }

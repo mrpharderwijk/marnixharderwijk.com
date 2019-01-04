@@ -12,9 +12,9 @@ const isNotHomePage = (url) => {
 /**
  * retrieve the back button value
  */
-export const showBackButton = location => (dispatch) => {
+export const showBackButton = pathName => (dispatch) => {
   dispatch(shouldShowBackButton({
     receivedAt: Date.now(),
-    backButton: isNotHomePage(location.pathname),
+    backButton: isNotHomePage(pathName),
   }));
 };

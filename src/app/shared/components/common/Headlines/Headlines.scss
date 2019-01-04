@@ -11,13 +11,13 @@
     color: $color-white;
     position: absolute;
     text-align: center;
-    transform: translate3d(0, 0, 0) translateY(25px);
+    transform: translate3d(0, 0, 0) translateY(toRem(25px));
     width: 100%;
     animation-iteration-count: 1;
     @extend .animate--top-in-bottom-out;
 
     &:nth-child(1) {
-      animation-delay: 0s;
+      animation-delay: -0s;
     }
 
     &:nth-child(2) {

@@ -10,6 +10,7 @@ import applicationHistory from './app/Application/ApplicationHistory';
 import ApplicationContainer from './app/Application/ApplicationContainer';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/react-typist/dist/Typist.css';
 import './assets/styles/styles.css';
 
 render(

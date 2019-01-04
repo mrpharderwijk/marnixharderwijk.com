@@ -5,15 +5,15 @@ export default {
   },
   headlines: [{
     id: 0,
-    label: 'JavaScript developer',
+    label: 'Angular',
   },
   {
     id: 1,
-    label: 'Angular developer',
+    label: 'ReactJS',
   },
   {
     id: 2,
-    label: 'ReactJS developer',
+    label: 'JavaScript',
   },
   {
     id: 3,

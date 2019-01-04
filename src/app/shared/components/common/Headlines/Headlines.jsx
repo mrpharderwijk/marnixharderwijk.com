@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typist from 'react-typist';
 
 import './Headlines.css';
 
@@ -14,24 +15,36 @@ const defaultProps = {
   lines: null,
 };
 
-const Headlines = ({ lines }) => (
-  <React.Fragment>
-    {
-      lines && lines.length
-        ? (
-          <ul className="list-group list-group-headline">
-            {
-              lines.map(headline => (
-                <li className="list-group-item list-group-item--animate" key={headline.id}>
-                  {headline.label}
-                </li>
-              ))
-            }
-          </ul>
-        ) : ''
-    }
-  </React.Fragment>
-);
+const Headlines = ({ lines }) => {
+  const getCursorProps = () => ({
+    hideWhenDone: true,
+  });
+
+  const getStartDelay = () => (1000);
+
+  return (
+    <Typist className="h-color--white h-align--center" startDelay={getStartDelay()} cursor={getCursorProps()}>
+      {
+        lines && lines.length
+          ? (
+            lines.map((headline, index) => (
+              <span key={headline.id}>
+                {headline.label}
+                {
+                  (index + 1) < lines.length
+                    ? (
+                      <Typist.Backspace count={headline.label.length} delay={1000} />
+                    )
+                    : ''
+                }
+              </span>
+            ))
+          )
+          : ''
+      }
+    </Typist>
+  );
+};
 
 Headlines.propTypes = propTypes;
 Headlines.defaultProps = defaultProps;

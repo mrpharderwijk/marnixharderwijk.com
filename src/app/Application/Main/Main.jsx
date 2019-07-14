@@ -11,24 +11,23 @@ import './Main.css';
 const propTypes = {
   cookies: PropTypes.shape({
     isLoading: PropTypes.bool,
-    cookieApproval: PropTypes.bool,
-  }).isRequired,
+    cookieApproval: PropTypes.bool
+  }).isRequired
 };
 
 const Main = () => (
   <div className="main">
     <main role="main" className="main__container">
       <Jumbotron fluid className="main__container__jumbotron">
-        { /* header text */
-          mainMock.header
-            ? (
-              <h1 className="heading heading--xxl">
-                <span className="highlight">{mainMock.header.firstName}</span>
-                {' '}
-                <span>{mainMock.header.lastName}</span>
-              </h1>
-            ) : ''
-        }
+        {/* header text */
+        mainMock.header ? (
+          <h1 className="heading heading--xxl">
+            <span className="highlight">{mainMock.header.firstName}</span>{' '}
+            <span>{mainMock.header.lastName}</span>
+          </h1>
+        ) : (
+          ''
+        )}
 
         <Headlines lines={mainMock.headlines} />
         <SocialList listItems={mainMock.socialList} />

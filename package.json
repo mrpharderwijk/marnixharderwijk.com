@@ -28,7 +28,7 @@
     "react-dom": "^16.5.2",
     "react-moment": "^0.7.9",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^7.5.2",
     "react-scripts": "^3.0.1",
     "react-typist": "^2.0.4",
     "reactstrap": "^6.3.0",
